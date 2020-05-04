@@ -1,0 +1,13 @@
+config:
+  target: "a"
+  phases:
+    - duration: 1000
+      arrivalCount: 10000
+    - duration: 5500
+      arrivalCount: 1
+  processor: "./utils/emitter-subscribe.js"
+scenarios:
+  - name: "Test 1"
+    flow:
+      - function: "subscribe"
+      - think: 6000

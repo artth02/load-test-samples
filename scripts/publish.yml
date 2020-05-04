@@ -1,0 +1,13 @@
+config:
+  target: "www.google.com"
+  phases:
+    - duration: 100
+      arrivalRate: 2
+      rampTo: 4
+    - duration: 720
+      arrivalRate: 4
+  processor: "./utils/emitter-publisher.js"
+scenarios:
+  - name: "Test 1 - Publish"
+    flow:
+      - function: "publish"
